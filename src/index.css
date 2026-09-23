@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --theme-bg: #FFF6DB;
+    --theme-bg-subtle: #FFFDE8;
+    --theme-primary: #FF9E00;
+    --theme-primary-rgb: 255, 158, 0;
+    --theme-secondary: #1B5E20;
+    --theme-accent: #FFC107;
+    --theme-dark: #3A1C00;
+    --theme-text-dark: #3A1C00;
+    --theme-glow: rgba(255, 158, 0, 0.20);
+  }
+
+  body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  }
+
+  h1, h2, h3, .font-sheetal {
+    font-family: 'Fredoka', cursive, sans-serif;
+    color: var(--theme-dark);
+  }
+
+  .font-bubble {
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+  }
+}
+
+/* Dynamic Solid Flavour Background Containers */
+.theme-container {
+  background-color: var(--theme-bg);
+  color: var(--theme-text-dark);
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+}
+
+/* Solid Light Card & Container Utilities (NO GRADIENTS) */
+.v2-glass {
+  background-color: #FFFFFF;
+  border: 2px solid rgba(58, 28, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  color: var(--theme-text-dark);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.v2-glass-glow {
+  background-color: #FFFFFF;
+  border: 2px solid var(--theme-primary);
+  box-shadow: 0 12px 32px var(--theme-glow);
+  color: var(--theme-text-dark);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Dynamic Solid Badge Boxes */
+.doodle-badge {
+  border: 3px solid var(--theme-dark);
+  border-radius: 40px 15px 35px 20px / 20px 35px 15px 40px;
+  box-shadow: 5px 5px 0px var(--theme-dark);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Dynamic Magnetic Solid Buttons */
+.magnetic-btn {
+  will-change: transform;
+}
+
+/* Interactive Solid Light Flavour Cards */
+.sheetal-card {
+  background-color: #FFFFFF;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+  will-change: transform;
+}
+
+.sheetal-card:hover {
+  transform: translateY(-6px) scale(1.02) rotate(-0.5deg);
+  box-shadow: 0 16px 32px var(--theme-glow);
+  border-color: var(--theme-primary);
+}
+
+/* Scroll-to-Top Button */
+.scroll-top-btn {
+  background-color: var(--theme-primary);
+  color: #FFFFFF;
+  border: 2px solid var(--theme-dark);
+  box-shadow: 4px 4px 0px var(--theme-dark);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  transform: scale(1.1) rotate(4deg);
+  background-color: var(--theme-dark);
+  color: #FFFFFF;
+}
+
+/* Custom Solid Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 5px;
+}
