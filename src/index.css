@@ -109,3 +109,12 @@
   background: var(--theme-primary);
   border-radius: 5px;
 }
+
+/* Utility to hide scrollbars for horizontal scroll containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
